@@ -8,6 +8,7 @@ export default function Title (){
             <h1>{title}</h1>
             <form>
                 <input type="text" placeholder="rechercher un drone" />
+                <button type="submit">Search</button>
             </form>
         </div>
     )

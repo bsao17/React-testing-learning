@@ -14,7 +14,7 @@ describe("should test Title component", ()=>{
         //assert title
         expect(title).toHaveTextContent("ma boutique de drone");
     });
-    
+
     it("should render search input", ()=>{
         //get search input
         const search = document.querySelector("input");
@@ -29,6 +29,18 @@ describe("should test Title component", ()=>{
         //assert form
         expect(form).toBeInTheDocument();
     });
+    // testing button searching
+    it("should render button", ()=>{
+        //get button
+        const button = document.querySelector("button");
+        //assert button
+        expect(button).toBeInTheDocument();
+    });
+    it("should verify text button", ()=>{
+        //get button
+        const button = document.querySelector("button");
+        expect(button).toHaveTextContent("Search");
+    })
 });
 
     

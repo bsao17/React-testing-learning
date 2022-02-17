@@ -1,4 +1,3 @@
-import './App.css';
 import Title from "./component/title/Title";
 
 function App() {
