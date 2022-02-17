@@ -49,6 +49,10 @@ describe("should realized TTD test", ()=>{
            render(<Title />);
    });
     //TDD for image test
+    it("should verify HTML element to be in the document", ()=>{
+        const image = document.querySelector("#img");
+        expect(image).toBeInTheDocument();
+    })
     it("should render image", ()=>{
         //get image
         const image = document.querySelector("#img");
