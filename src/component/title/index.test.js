@@ -43,4 +43,13 @@ describe("should test Title component", ()=>{
     })
 });
 
+describe("should realized TTD test", ()=>{
+    //TDD for image test
+    it("should render image", ()=>{
+        //get image
+        const image = document.querySelector("img");
+        //assert image
+        expect(image).toBeInTheDocument();
+    });
+}); 
     
