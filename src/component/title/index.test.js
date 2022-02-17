@@ -44,12 +44,16 @@ describe("should test Title component", ()=>{
 });
 
 describe("should realized TTD test", ()=>{
+    beforeEach(()=>{
+        //render component
+           render(<Title />);
+   });
     //TDD for image test
     it("should render image", ()=>{
         //get image
-        const image = document.querySelector("img");
+        const image = document.querySelector("#img");
         //assert image
-        expect(image).toBeInTheDocument();
+        expect(image).toHaveAttribute("alt", "test React picture");
     });
 }); 
     
