@@ -60,4 +60,11 @@ describe("should realized TTD test", ()=>{
         expect(image).toHaveAttribute("alt", "test React picture");
     });
 }); 
+
+describe("should test API query", ()=>{
+    beforeEach(()=>{
+        render(<Title />);
+    })
+    
+})
     
