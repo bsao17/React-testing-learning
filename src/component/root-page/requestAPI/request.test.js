@@ -6,8 +6,9 @@ describe("async query test", ()=>{
         render(<RequestAPI/>)
     })
     
-    it("should test API query", async ()=>{
-        let query = await fetch("https://fakestoreapi.com/products").then(resolve=>resolve.json())
-        expect(query).toHaveReturned()
+    it("should test API query", ()=>{
+        function callback(data){
+            expect(data).toBe("hello world")
+        }
     })
 })
