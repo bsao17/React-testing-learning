@@ -1,4 +1,4 @@
-import Title from "./component/title/Title";
+import Title from "./component/root-page/title/Title";
 
 function App() {
   return (

@@ -10,9 +10,9 @@ describe("should test Title component", ()=>{
     });
     it("should render title", ()=>{
         //get title
-        const title = document.querySelector("h1");
+        const title = document.querySelector("#drone-title");
         //assert title
-        expect(title).toHaveTextContent("ma boutique de drone");
+        expect(title).toHaveTextContent("ma boutique de drones");
     });
 
     it("should render search input", ()=>{
@@ -50,7 +50,7 @@ describe("should realized TTD test", ()=>{
    });
     //TDD for image test
     it("should verify HTML element to be in the document", ()=>{
-        const image = document.querySelector("#img");
+        const image = document.querySelector("#drone-title");
         expect(image).toBeInTheDocument();
     })
     it("should render image", ()=>{
