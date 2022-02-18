@@ -9,15 +9,15 @@ describe("async query test", () => {
   it("should test API query", async () => {
     // test with mock
     const mock = jest.fn();
-    mock.mockResolvedValueOnce({
-      data: [
-        {
-          id: 1,
-          title: "drone 1",
-          price: "100",
-          image: "image/drone1.png",
-        },
-      ],
-    });
+    const data = {
+        name : "BuggyPee",
+        type: "vpn quadcopter",
+        price: 199,
+        categlry: "micro drone"
+    }
+    mock.mockReturnValue(data);
+    const result = await mock();
+    expect(result.name).toBe("BuggyPee")
+
   });
 });
