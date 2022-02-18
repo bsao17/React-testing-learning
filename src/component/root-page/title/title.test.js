@@ -61,10 +61,5 @@ describe("should realized TTD test", ()=>{
     });
 }); 
 
-describe("should test API query", ()=>{
-    beforeEach(()=>{
-        render(<Title />);
-    })
-    
-})
+
     

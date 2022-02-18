@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import style from "./requestAPI.module.scss"
 
 export default function RequestAPI() {
-    const queryData = async () => {
-        const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
-        const data = await response.json();
-        console.log(data);
-    }
+  const [data, setData] = useState(null);
 
-    return (
-        <div>
-            
-        </div>
-    );
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+      });
+  }, []);
+
+  return (
+    <div>
+      {data &&
+        data.map((product) => {
+          console.log(product);
+          return (
+            <div id={style.products} key={product.id}>
+              {product.title} : {product.price}
+            </div>
+          );
+        })}
+    </div>
+  );
 }
