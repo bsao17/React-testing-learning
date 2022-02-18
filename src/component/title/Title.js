@@ -2,7 +2,7 @@ import React, {useState} from "react"
 
 
 export default function Title (){
-    const [title] = useState("ma boutique de drone");
+    const [title] = useState("ma boutique de drones");
     return(
         <div id="title">
             <div id={"drone-title"}>{title}</div>
